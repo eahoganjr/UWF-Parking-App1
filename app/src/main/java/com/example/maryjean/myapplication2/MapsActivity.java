@@ -20,7 +20,7 @@ import java.io.IOException;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    private GoogleMap mMap,gMap;
 
     Button buttonA,buttonB,buttonC,buttonE,buttonF,buttonG,
             buttonH,buttonI,buttonJ,buttonK,buttonL,buttonM,
@@ -35,8 +35,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
     try {
-        KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+        KmlLayer kmlLayer = new KmlLayer(getMap(), R.raw.lots, getApplicationContext());
         kmlLayer.addLayerToMap();
         } catch (IOException e) {
             e.printStackTrace();
@@ -313,5 +314,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Z,17));
     }
 
-
+    protected GoogleMap getMap() {
+        return mMap;
+    }
 }
+
