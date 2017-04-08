@@ -2,6 +2,8 @@ package com.example.maryjean.myapplication2;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,8 +24,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
 
+
+    final Button button = (Button) findViewById(R.id.button1);
+         button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            lotA(mMap);
+        }
+    });
+    final Button button = (Button) findViewById(R.id.button2);
+         button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            lotA(mMap);
+        }
+    });
+    final Button button = (Button) findViewById(R.id.button3);
+         button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            lotA(mMap);
+        }
+    });
+    final Button button = (Button) findViewById(R.id.button4);
+         button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            lotA(mMap);
+        }
+    });
+    }
 
     /**
      * Manipulates the map once available.
@@ -48,6 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void lotA(GoogleMap googleMap) {
 
+        mMap = googleMap;
         LatLng Lot_A = new LatLng(30.547697, -87.218028);
         mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Lot_A));
