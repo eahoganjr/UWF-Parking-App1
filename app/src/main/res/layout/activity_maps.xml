@@ -137,5 +137,5 @@
         android:max="200"
         android:progress="50"
         tools:layout_editor_absoluteY="477dp"
-        tools:layout_editor_absoluteX="0dp" /><!-- set 150 maximum value for the progress -->
+        tools:layout_editor_absoluteX="76dp" /><!-- set 150 maximum value for the progress -->
 </android.support.constraint.ConstraintLayout>

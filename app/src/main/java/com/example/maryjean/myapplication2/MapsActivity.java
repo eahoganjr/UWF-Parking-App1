@@ -1,5 +1,6 @@
 package com.example.maryjean.myapplication2;
 
+import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +12,20 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.kml.KmlLayer;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    Button buttonA,buttonB,buttonC,buttonE;
+
+    Button buttonA,buttonB,buttonC,buttonE,buttonF,buttonG,
+            buttonH,buttonI,buttonJ,buttonK,buttonL,buttonM,
+            buttonO,buttonP,buttonQ,buttonR,buttonS,buttonT,
+            buttonU,buttonV,buttonW,buttonX,buttonY,buttonZ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +35,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+    try {
+        KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+        kmlLayer.addLayerToMap();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
+
+/*    KmlLayer layer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+    layer.addLayerToMap();*/
 
     buttonA = (Button) findViewById(R.id.button1);
     buttonB = (Button) findViewById(R.id.button2);
     buttonC = (Button) findViewById(R.id.button3);
     buttonE = (Button) findViewById(R.id.button4);
+/*    buttonF = (Button) findViewById(R.id.button5);
+    buttonG = (Button) findViewById(R.id.button6);
+    buttonH = (Button) findViewById(R.id.button7);
+    buttonI = (Button) findViewById(R.id.button8);
+    buttonJ = (Button) findViewById(R.id.button9);
+    buttonK = (Button) findViewById(R.id.button10);
+    buttonL = (Button) findViewById(R.id.button11);
+    buttonM = (Button) findViewById(R.id.button12);
+    buttonO = (Button) findViewById(R.id.button13);
+    buttonP = (Button) findViewById(R.id.button14);
+    buttonQ = (Button) findViewById(R.id.button15);
+    buttonR = (Button) findViewById(R.id.button16);
+    buttonS = (Button) findViewById(R.id.button17);
+    buttonT = (Button) findViewById(R.id.button18);
+    buttonU = (Button) findViewById(R.id.button19);
+    buttonV = (Button) findViewById(R.id.button20);
+    buttonW = (Button) findViewById(R.id.button21);
+    buttonX = (Button) findViewById(R.id.button22);
+    buttonY = (Button) findViewById(R.id.button23);
+    buttonZ = (Button) findViewById(R.id.button24);*/
+
 
     buttonA.setOnClickListener(new View.OnClickListener()
         {
@@ -89,15 +131,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng Lot_X = new LatLng(30.554759, -87.217545);
     LatLng Lot_Y = new LatLng(30.546779, -87.213681);
     LatLng Lot_Z = new LatLng(30.545818, -87.213370);
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @Override
 
     public void onMapReady(GoogleMap googleMap) {
@@ -105,7 +139,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
 
-        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
+/*        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
 
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
 
@@ -151,7 +185,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.addMarker(new MarkerOptions().position(Lot_Y).title("Lot Y"));
 
-        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));
+        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));*/
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15));
@@ -216,66 +250,68 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void lotM(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_M,17));
     }
     public void lotO(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_O,17));
     }
     public void lotP(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_P,17));
     }
     public void lotQ(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Q,17));
     }
     public void lotR(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_R,17));
     }
     public void lotS(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_S,17));
     }
     public void lotT(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_T,17));
     }
     public void lotU(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_U,17));
     }
     public void lotV(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_V,17));
     }
     public void lotW(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_W,17));
     }
     public void lotX(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_X,17));
     }
     public void lotY(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Y,17));
     }
     public void lotZ(GoogleMap googleMap) {
 
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Z,17));
     }
+
+
 }
