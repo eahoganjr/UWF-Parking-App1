@@ -8,7 +8,7 @@
     android:baselineAligned="false">
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/button2"
         android:layout_width="91dp"
         android:layout_height="59dp"
         android:layout_marginBottom="401dp"
@@ -62,7 +62,7 @@
         tools:layout_constraintRight_creator="1" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button3"
         android:layout_width="91dp"
         android:layout_height="59dp"
         android:layout_marginBottom="342dp"
@@ -80,7 +80,7 @@
         tools:layout_constraintRight_creator="1" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button4"
         android:layout_width="91dp"
         android:layout_height="59dp"
         android:layout_marginBottom="283dp"
