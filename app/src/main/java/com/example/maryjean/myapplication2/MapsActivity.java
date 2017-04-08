@@ -142,8 +142,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         }
-        
-/*        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
+
+        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
 
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
 
@@ -189,7 +189,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.addMarker(new MarkerOptions().position(Lot_Y).title("Lot Y"));
 
-        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));*/
+        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15));
