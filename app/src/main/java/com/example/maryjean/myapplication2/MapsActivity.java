@@ -72,7 +72,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         {
             public void onClick(View v)
             {
-                lotA(mMap);
+                lotA();
             }
         }
     );
@@ -80,7 +80,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                    {
                                        public void onClick(View v)
                                        {
-                                           lotB(mMap);
+                                           lotB();
                                        }
                                    }
         );
@@ -88,7 +88,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                    {
                                        public void onClick(View v)
                                        {
-                                           lotC(mMap);
+                                           lotC();
                                        }
                                    }
         );
@@ -96,7 +96,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                    {
                                        public void onClick(View v)
                                        {
-                                           lotE(mMap);
+                                           lotE();
                                        }
                                    }
         );
@@ -195,125 +195,77 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15));
     }
 
-    public void lotA(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotA() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
     }
 
-    public void lotB(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotB() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_B,17));
     }
-    public void lotC(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotC() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_C,17));
     }
-    public void lotE(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotE() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_E,17));
     }
-    public void lotF(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotF() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_F,17));
     }
-    public void lotG(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotG() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_G,17));
     }
-    public void lotH(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotH() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_H,17));
     }
-    public void lotI(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotI() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_I,17));
     }
-    public void lotJ(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotJ() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_J,17));
     }
-    public void lotK(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotK() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_K,17));
     }
-    public void lotL(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotL() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_L,17));
     }
-    public void lotM(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotM() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_M,17));
     }
-    public void lotO(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotO() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_O,17));
     }
-    public void lotP(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotP() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_P,17));
     }
-    public void lotQ(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotQ() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Q,17));
     }
-    public void lotR(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotR() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_R,17));
     }
-    public void lotS(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotS() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_S,17));
     }
-    public void lotT(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotT() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_T,17));
     }
-    public void lotU(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotU() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_U,17));
     }
-    public void lotV(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotV() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_V,17));
     }
-    public void lotW(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotW() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_W,17));
     }
-    public void lotX(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotX() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_X,17));
     }
-    public void lotY(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotY() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Y,17));
     }
-    public void lotZ(GoogleMap googleMap) {
-
-        mMap = googleMap;
+    public void lotZ() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Z,17));
     }
 
