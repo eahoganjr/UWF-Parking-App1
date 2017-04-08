@@ -142,6 +142,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         }
+        
 /*        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
 
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
