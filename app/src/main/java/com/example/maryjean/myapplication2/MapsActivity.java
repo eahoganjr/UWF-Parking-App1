@@ -26,7 +26,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             buttonH,buttonI,buttonJ,buttonK,buttonL,buttonM,
             buttonO,buttonP,buttonQ,buttonR,buttonS,buttonT,
             buttonU,buttonV,buttonW,buttonX,buttonY,buttonZ;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +37,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
 
-    try {
-        KmlLayer kmlLayer = new KmlLayer(getMap(), R.raw.lots, getApplicationContext());
-        kmlLayer.addLayerToMap();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        }
+
 
 /*    KmlLayer layer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
     layer.addLayerToMap();*/
@@ -141,6 +134,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
 
+        try {
+            KmlLayer kmlLayer = new KmlLayer(getMap(), R.raw.lots, getApplicationContext());
+            kmlLayer.addLayerToMap();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
 /*        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
 
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
