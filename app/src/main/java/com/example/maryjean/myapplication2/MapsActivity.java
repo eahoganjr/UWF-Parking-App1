@@ -35,13 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
-
-/*    KmlLayer layer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
-    layer.addLayerToMap();*/
-
+        
     buttonA = (Button) findViewById(R.id.button1);
     buttonB = (Button) findViewById(R.id.button2);
     buttonC = (Button) findViewById(R.id.button3);
@@ -66,7 +60,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     buttonX = (Button) findViewById(R.id.button22);
     buttonY = (Button) findViewById(R.id.button23);
     buttonZ = (Button) findViewById(R.id.button24);*/
-
 
     buttonA.setOnClickListener(new View.OnClickListener()
         {
@@ -128,7 +121,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng Lot_Z = new LatLng(30.545818, -87.213370);
 
     @Override
-
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
@@ -144,51 +136,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_C).title("Lot C"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_E).title("Lot E"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_F).title("Lot F"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_G).title("Lot G"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_H).title("Lot H"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_I).title("Lot I"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_J).title("Lot J"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_K).title("Lot K"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_L).title("Lot L"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_M).title("Lot M"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_O).title("Lot O"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_P).title("Lot P"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_Q).title("Lot Q"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_R).title("Lot R"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_S).title("Lot S"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_T).title("Lot T"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_U).title("Lot U"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_V).title("Lot V"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_W).title("Lot W"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_X).title("Lot X"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_Y).title("Lot Y"));
-
         mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
@@ -198,7 +167,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void lotA() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
     }
-
     public void lotB() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_B,17));
     }
@@ -273,4 +241,3 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return mMap;
     }
 }
-
