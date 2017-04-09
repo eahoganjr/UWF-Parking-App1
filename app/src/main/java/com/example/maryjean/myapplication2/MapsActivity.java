@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -67,6 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     buttonX = (Button) findViewById(R.id.button22);
     buttonY = (Button) findViewById(R.id.button23);
     buttonZ = (Button) findViewById(R.id.button24);
+
 
     buttonA.setOnClickListener(new View.OnClickListener()
         {
