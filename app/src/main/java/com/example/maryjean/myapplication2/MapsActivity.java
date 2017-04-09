@@ -36,11 +36,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         
-    buttonA = (Button) findViewById(R.id.button1);
+/*    buttonA = (Button) findViewById(R.id.button1);
     buttonB = (Button) findViewById(R.id.button2);
     buttonC = (Button) findViewById(R.id.button3);
     buttonE = (Button) findViewById(R.id.button4);
-/*    buttonF = (Button) findViewById(R.id.button5);
+    buttonF = (Button) findViewById(R.id.button5);
     buttonG = (Button) findViewById(R.id.button6);
     buttonH = (Button) findViewById(R.id.button7);
     buttonI = (Button) findViewById(R.id.button8);
