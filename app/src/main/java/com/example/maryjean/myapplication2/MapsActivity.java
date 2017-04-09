@@ -33,6 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+
     Button buttonA, buttonB, buttonC, buttonE, buttonF, buttonG,
             buttonH, buttonI, buttonJ, buttonK, buttonL, buttonM,
             buttonO, buttonP, buttonQ, buttonR, buttonS, buttonT,
