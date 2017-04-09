@@ -182,7 +182,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
-            //KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+
             KmlLayer kmlLayerag = new KmlLayer(mMap, R.raw.lotag, getApplicationContext());
             KmlLayer kmlLayeray = new KmlLayer(mMap, R.raw.lotay, getApplicationContext());
             KmlLayer kmlLayerar = new KmlLayer(mMap, R.raw.lotar, getApplicationContext());
@@ -280,7 +280,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerzr = new KmlLayer(mMap, R.raw.lotzr, getApplicationContext());
 
 
-            /*KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
+
+            /*KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+            KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
             KmlLayer kmlLayerc = new KmlLayer(mMap, R.raw.lotc, getApplicationContext());
             KmlLayer kmlLayere = new KmlLayer(mMap, R.raw.lote, getApplicationContext());
             KmlLayer kmlLayerf = new KmlLayer(mMap, R.raw.lotf, getApplicationContext());
