@@ -7,135 +7,20 @@
     android:weightSum="1"
     android:baselineAligned="false">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="401dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="lotA"
-        android:text="Lot B"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="226dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="lotA"
-        android:text="Lot F"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="167dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="lotA"
-        android:text="Lot G"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="342dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="lotA"
-        android:text="Lot C"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="283dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="lotA"
-        android:text="Lot E"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="257dp"
-        android:layout_height="458dp"
-        tools:context="com.example.maryjean.myapplication2.MapsActivity"
-        tools:layout="@android:layout/simple_spinner_item"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        map:layout_constraintBottom_toTopOf="@+id/button1"
-        tools:layout_constraintLeft_creator="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         map:layout_constraintLeft_toLeftOf="parent"
         map:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="0dp"
-        map:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="91dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="460dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Lot A"
-        android:visibility="visible"
-        map:layout_constraintBottom_toBottomOf="parent"
-        map:layout_constraintHorizontal_bias="1.0"
-        map:layout_constraintLeft_toLeftOf="parent"
-        map:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
+        tools:context="com.example.maryjean.myapplication2.MapsActivity"
+        tools:layout="@android:layout/simple_spinner_item"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintTop_creator="1" />
 
-    <SeekBar
-        android:id="@+id/simpleSeekBar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:max="200"
-        android:progress="50"
-        tools:layout_editor_absoluteY="477dp"
-        tools:layout_editor_absoluteX="76dp" /><!-- set 150 maximum value for the progress -->
+    <!-- set 150 maximum value for the progress -->
 </android.support.constraint.ConstraintLayout>
