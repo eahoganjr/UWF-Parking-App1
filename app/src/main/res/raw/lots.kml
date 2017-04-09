@@ -2,13 +2,13 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>lots</name>
-    <Style id="poly-097138-1-77-nodesc-normal">
+    <Style id="poly-558B2F-1-77-nodesc-normal">
       <LineStyle>
-        <color>ff387109</color>
+        <color>ff2f8b55</color>
         <width>1</width>
       </LineStyle>
       <PolyStyle>
-        <color>4d387109</color>
+        <color>4d2f8b55</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
@@ -16,13 +16,13 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="poly-097138-1-77-nodesc-highlight">
+    <Style id="poly-558B2F-1-77-nodesc-highlight">
       <LineStyle>
-        <color>ff387109</color>
+        <color>ff2f8b55</color>
         <width>2</width>
       </LineStyle>
       <PolyStyle>
-        <color>4d387109</color>
+        <color>4d2f8b55</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
@@ -30,19 +30,19 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="poly-097138-1-77-nodesc">
+    <StyleMap id="poly-558B2F-1-77-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#poly-097138-1-77-nodesc-normal</styleUrl>
+        <styleUrl>#poly-558B2F-1-77-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#poly-097138-1-77-nodesc-highlight</styleUrl>
+        <styleUrl>#poly-558B2F-1-77-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
     <Placemark>
       <name>Lot S</name>
-      <styleUrl>#poly-097138-1-77-nodesc</styleUrl>
+      <styleUrl>#poly-558B2F-1-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
