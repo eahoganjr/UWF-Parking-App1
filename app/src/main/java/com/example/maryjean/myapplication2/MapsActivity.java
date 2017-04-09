@@ -3,11 +3,14 @@ package com.example.maryjean.myapplication2;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+
+import java.io.InputStream;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -45,7 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private int lotastat = 50;
     private int lotbstat = 50;
-    private int lotcstat = 50;
+    private int lotcstat = 90;
     private int lotestat = 50;
     private int lotfstat = 50;
     private int lotgstat = 50;
@@ -91,7 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             "x.txt",
             "y.txt",
             "z.txt"
-    };
+    }; */
 
     Button buttonA, buttonB, buttonC, buttonE, buttonF, buttonG,
             buttonH, buttonI, buttonJ, buttonK, buttonL, buttonM,
@@ -182,6 +185,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+            //KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
 
             KmlLayer kmlLayerag = new KmlLayer(mMap, R.raw.lotag, getApplicationContext());
             KmlLayer kmlLayeray = new KmlLayer(mMap, R.raw.lotay, getApplicationContext());
@@ -279,9 +283,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerzy = new KmlLayer(mMap, R.raw.lotzy, getApplicationContext());
             KmlLayer kmlLayerzr = new KmlLayer(mMap, R.raw.lotzr, getApplicationContext());
 
+*/
 
-
-            /*KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+           /* KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
             KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
             KmlLayer kmlLayerc = new KmlLayer(mMap, R.raw.lotc, getApplicationContext());
             KmlLayer kmlLayere = new KmlLayer(mMap, R.raw.lote, getApplicationContext());
@@ -307,8 +311,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerz = new KmlLayer(mMap, R.raw.lotz, getApplicationContext()); */
 
             kmlLayer.addLayerToMap();
-
+            //kmlLayera.addLayerToMap();
             readPercents();
+            /*if(MIN <= lotastat && lotastat < GREEN)
+                kmlLayerag.addLayerToMap();
+            else if(GREEN <= lotastat && lotastat < YELLOW)
+                kmlLayeray.addLayerToMap();
+            else if(YELLOW <= lotastat && lotastat <= RED)
+                kmlLayerar.addLayerToMap();*/
+
+
 
             //kmlLayera.addLayerToMap();
             if(MIN <= lotastat && lotastat < GREEN)
@@ -331,7 +343,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 kmlLayercy.addLayerToMap();
             else if(YELLOW <= lotcstat && lotcstat <= RED)
                 kmlLayercr.addLayerToMap();
-
+/*
             if(MIN <= lotestat && lotestat < GREEN)
                 kmlLayereg.addLayerToMap();
             else if(GREEN <= lotestat && lotestat < YELLOW)
@@ -478,7 +490,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 kmlLayerzy.addLayerToMap();
             else if(YELLOW <= lotzstat && lotzstat <= RED)
                 kmlLayerzr.addLayerToMap();
-
+            */
 
 
 
@@ -548,15 +560,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     public void readPercents() {
+        System.err.println("DEBUG!");
+        /*Scanner reader;
+        try {
+            AssetManager am = MapsActivity.this.getApplicationContext().getAssets();
+            //InputStream in = getAssets().open("a.txt");
+            InputStream in = am.open("a.txt");
+            reader = new Scanner(in);
+            int j = reader.nextInt();
+            reader.close();
+            lotastat = j;
+            //lotnameslist.add(j);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }*/
         ArrayList<Integer> lotnameslist = new ArrayList<Integer>();
-        for(int i=0; i<lotnames.length; i++) {
+        for (int i = 0; i < lotnames.length; i++) {
             Scanner reader;
             try {
-                reader = new Scanner(new FileInputStream(lotnames[i]));
+                AssetManager am = MapsActivity.this.getApplicationContext().getAssets();
+                InputStream in = getAssets().open(lotnames[i]);
+                reader = new Scanner(in);
                 int j = reader.nextInt();
                 reader.close();
                 lotnameslist.add(j);
-            } catch (FileNotFoundException e) {
+            } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
@@ -564,6 +594,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lotastat = lotnameslist.remove(0);
         lotbstat = lotnameslist.remove(0);
         lotcstat = lotnameslist.remove(0);
+    }/*
         lotestat = lotnameslist.remove(0);
         lotfstat = lotnameslist.remove(0);
         lotgstat = lotnameslist.remove(0);
@@ -587,7 +618,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lotzstat = lotnameslist.remove(0);
     }
 
-
+*/
 
 
 
