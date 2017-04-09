@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import static com.example.maryjean.myapplication2.R.id.FacultyBar;
+import static com.example.maryjean.myapplication2.R.id.StudentBar;
+
 public class Main2Activity extends AppCompatActivity {
 
     @Override
@@ -12,8 +15,10 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-/*        SeekBar seekBar = (SeekBar)findViewById(R.id.StudentBar);
-        final TextView seekBarValue = (TextView)findViewById(R.id.seekbarvalue);
+        SeekBar seekBar = (SeekBar)findViewById(StudentBar);
+        int value = seekBar.getProgress();
+        seekBar.setMax(100);
+        final TextView seekBarValue = (TextView)findViewById(R.id.studentbardata);
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
@@ -33,7 +38,32 @@ public class Main2Activity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
-        });*/
+        });
+
+        SeekBar seekBar2 = (SeekBar)findViewById(FacultyBar);
+        int value2 = seekBar.getProgress();
+        seekBar.setMax(100);
+        final TextView seekBarValue2 = (TextView)findViewById(R.id.facultybardata);
+
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar2, int progress,
+                                          boolean fromUser) {
+                // TODO Auto-generated method stub
+                seekBarValue2.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+        });
     }
 
 }
