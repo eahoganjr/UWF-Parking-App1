@@ -551,12 +551,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Scanner reader;
             try {
                 reader = new Scanner(new FileInputStream(lotnames[i]));
+                int j = reader.nextInt();
+                reader.close();
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            int j = reader.nextInt();
-            reader.close();
             lotnameslist.add(j);
 
         }

@@ -35,12 +35,12 @@ public class Main2Activity extends AppCompatActivity {
                 PrintWriter writer;
                 try {
                     writer = new PrintWriter(new FileOutputStream("a.txt"));
+                    writer.println(progress);
+                    writer.close();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     System.err.println("Error: couldn't find output file!!!");
                 }
-                writer.println(progress);
-                writer.close();
             }
 
             @Override
