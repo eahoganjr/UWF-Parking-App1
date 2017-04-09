@@ -1,8 +1,11 @@
 package com.example.maryjean.myapplication2;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -40,11 +43,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-    buttonA = (Button) findViewById(R.id.button1);
+/*    buttonA = (Button) findViewById(R.id.button1);
     buttonB = (Button) findViewById(R.id.button2);
     buttonC = (Button) findViewById(R.id.button3);
     buttonE = (Button) findViewById(R.id.button4);
-/*    buttonF = (Button) findViewById(R.id.button5);
+    buttonF = (Button) findViewById(R.id.button5);
     buttonG = (Button) findViewById(R.id.button6);
     buttonH = (Button) findViewById(R.id.button7);
     buttonI = (Button) findViewById(R.id.button8);
@@ -63,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     buttonW = (Button) findViewById(R.id.button21);
     buttonX = (Button) findViewById(R.id.button22);
     buttonY = (Button) findViewById(R.id.button23);
-    buttonZ = (Button) findViewById(R.id.button24);*/
+    buttonZ = (Button) findViewById(R.id.button24);
 
     buttonA.setOnClickListener(new View.OnClickListener()
         {
@@ -96,7 +99,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                            lotE();
                                        }
                                    }
-        );
+        );*/
     }
     LatLng UWF = new LatLng(30.547969, -87.217352);
     LatLng Lot_A = new LatLng(30.544987, -87.219775);
@@ -128,12 +131,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
+       // mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
 
         try {
             KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
             KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
             KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
+/*
+            KmlLayer kmlLayerc = new KmlLayer(mMap, R.raw.lotc, getApplicationContext());
+            KmlLayer kmlLayere = new KmlLayer(mMap, R.raw.lote, getApplicationContext());
+            KmlLayer kmlLayerf = new KmlLayer(mMap, R.raw.lotf, getApplicationContext());
+            KmlLayer kmlLayerg = new KmlLayer(mMap, R.raw.lotg, getApplicationContext());
+            KmlLayer kmlLayerh = new KmlLayer(mMap, R.raw.loth, getApplicationContext());
+            KmlLayer kmlLayeri = new KmlLayer(mMap, R.raw.loti, getApplicationContext());
+            KmlLayer kmlLayerj = new KmlLayer(mMap, R.raw.lotj, getApplicationContext());
+            KmlLayer kmlLayerk = new KmlLayer(mMap, R.raw.lotk, getApplicationContext());
+            KmlLayer kmlLayerl = new KmlLayer(mMap, R.raw.lotl, getApplicationContext());
+            KmlLayer kmlLayerm = new KmlLayer(mMap, R.raw.lotm, getApplicationContext());
+            KmlLayer kmlLayero = new KmlLayer(mMap, R.raw.loto, getApplicationContext());
+            KmlLayer kmlLayerp = new KmlLayer(mMap, R.raw.lotp, getApplicationContext());
+            KmlLayer kmlLayerq = new KmlLayer(mMap, R.raw.lotq, getApplicationContext());
+            KmlLayer kmlLayerr = new KmlLayer(mMap, R.raw.lotr, getApplicationContext());
+            KmlLayer kmlLayers = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+            KmlLayer kmlLayert = new KmlLayer(mMap, R.raw.lott, getApplicationContext());
+            KmlLayer kmlLayeru = new KmlLayer(mMap, R.raw.lotu, getApplicationContext());
+            KmlLayer kmlLayerv = new KmlLayer(mMap, R.raw.lotv, getApplicationContext());
+            KmlLayer kmlLayerw = new KmlLayer(mMap, R.raw.lotw, getApplicationContext());
+            KmlLayer kmlLayerx = new KmlLayer(mMap, R.raw.lotx, getApplicationContext());
+            KmlLayer kmlLayery = new KmlLayer(mMap, R.raw.loty, getApplicationContext());
+            KmlLayer kmlLayerz = new KmlLayer(mMap, R.raw.lotz, getApplicationContext());
+*/
+
             kmlLayer.addLayerToMap();
             kmlLayera.addLayerToMap();
             kmlLayerb.addLayerToMap();
@@ -143,8 +171,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             e.printStackTrace();
         }
 
-
-        mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
+/*      mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
         mMap.addMarker(new MarkerOptions().position(Lot_C).title("Lot C"));
         mMap.addMarker(new MarkerOptions().position(Lot_E).title("Lot E"));
@@ -167,12 +194,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(Lot_W).title("Lot W"));
         mMap.addMarker(new MarkerOptions().position(Lot_X).title("Lot X"));
         mMap.addMarker(new MarkerOptions().position(Lot_Y).title("Lot Y"));
-        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));
+        mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));*/
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15));
     }
-
+    public void home() { mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15)); }
     public void lotA() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
     }
