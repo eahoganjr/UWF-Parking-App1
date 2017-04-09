@@ -15,12 +15,12 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        SeekBar seekBar3 = (SeekBar)findViewById(StudentBar);
-        int value3 = seekBar3.getProgress();
-        seekBar3.setMax(100);
+        SeekBar seekBar = (SeekBar)findViewById(StudentBar);
+        int value = seekBar.getProgress();
+        seekBar.setMax(100);
         final TextView seekBarValue = (TextView)findViewById(R.id.studentbardata);
 
-        seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
@@ -40,12 +40,12 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        SeekBar seekBar4 = (SeekBar)findViewById(FacultyBar);
-        int value4 = seekBar4.getProgress();
-        seekBar4.setMax(100);
+        SeekBar seekBar2 = (SeekBar)findViewById(FacultyBar);
+        int value2= seekBar2.getProgress();
+        seekBar2.setMax(100);
         final TextView seekBarValue2 = (TextView)findViewById(R.id.facultybardata);
 
-        seekBar4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
             @Override
             public void onProgressChanged(SeekBar seekBar2, int progress,
