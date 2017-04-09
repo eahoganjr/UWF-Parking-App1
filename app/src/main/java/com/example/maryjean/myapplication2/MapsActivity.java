@@ -59,7 +59,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     buttonW = (Button) findViewById(R.id.button21);
     buttonX = (Button) findViewById(R.id.button22);
     buttonY = (Button) findViewById(R.id.button23);
-    buttonZ = (Button) findViewById(R.id.button24);*/
+    buttonZ = (Button) findViewById(R.id.button24);
 
     buttonA.setOnClickListener(new View.OnClickListener()
         {
@@ -92,7 +92,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                            lotE();
                                        }
                                    }
-        );
+        );*/
     }
     LatLng UWF = new LatLng(30.547969, -87.217352);
     LatLng Lot_A = new LatLng(30.544987, -87.219775);
