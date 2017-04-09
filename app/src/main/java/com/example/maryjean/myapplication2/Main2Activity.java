@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
 import static com.example.maryjean.myapplication2.R.id.FacultyBar;
 import static com.example.maryjean.myapplication2.R.id.StudentBar;
 
@@ -27,6 +31,16 @@ public class Main2Activity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 seekBarValue.setText(String.valueOf(progress));
+
+                PrintWriter writer;
+                try {
+                    writer = new PrintWriter(new FileOutputStream("a.txt"));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                    System.err.println("Error: couldn't find output file!!!");
+                }
+                writer.println(progress);
+                writer.close();
             }
 
             @Override
