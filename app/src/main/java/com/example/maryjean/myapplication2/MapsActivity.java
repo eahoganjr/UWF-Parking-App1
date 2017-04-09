@@ -32,6 +32,12 @@ import java.io.IOException;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private GoogleMap mMap;
+    private final int MIN = 0;
+    private final int GREEN = 60;
+    private final int YELLOW = 85;
+    private final int RED = 100;
+
+    public int lotastat = 90;
 
 
     Button buttonA, buttonB, buttonC, buttonE, buttonF, buttonG,
@@ -123,7 +129,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
-            KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+            //KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+            KmlLayer kmlLayerag = new KmlLayer(mMap, R.raw.lotag, getApplicationContext());
+            KmlLayer kmlLayeray = new KmlLayer(mMap, R.raw.lotay, getApplicationContext());
+            KmlLayer kmlLayerar = new KmlLayer(mMap, R.raw.lotar, getApplicationContext());
+
             KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
             KmlLayer kmlLayerc = new KmlLayer(mMap, R.raw.lotc, getApplicationContext());
             KmlLayer kmlLayere = new KmlLayer(mMap, R.raw.lote, getApplicationContext());
@@ -149,7 +159,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerz = new KmlLayer(mMap, R.raw.lotz, getApplicationContext());
 
             kmlLayer.addLayerToMap();
-            kmlLayera.addLayerToMap();
+
+            //kmlLayera.addLayerToMap();
+            if(MIN <= lotastat && lotastat < GREEN)
+                kmlLayerag.addLayerToMap();
+            else if(GREEN <= lotastat && lotastat < YELLOW)
+                kmlLayeray.addLayerToMap();
+            else if(YELLOW <= lotastat && lotastat <= RED)
+                kmlLayerar.addLayerToMap();
+
+
             kmlLayerb.addLayerToMap();
             kmlLayerc.addLayerToMap();
             kmlLayere.addLayerToMap();
@@ -208,6 +227,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF, 15));
     }
+
+    public void setLotAStat(int percent) {
+        this.lotastat = percent;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void home() {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF, 15));
