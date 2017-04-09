@@ -1,5 +1,6 @@
 package com.example.maryjean.myapplication2;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.SeekBar;
@@ -7,6 +8,7 @@ import android.widget.TextView;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 import static com.example.maryjean.myapplication2.R.id.FacultyBar;
@@ -31,12 +33,18 @@ public class Main3Activity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 seekBarValue.setText(String.valueOf(progress));
-                PrintWriter writer;
-                try {
+                //PrintWriter writer;
+                FileOutputStream outputStream;
+                /*try {
                     writer = new PrintWriter(new FileOutputStream("b.txt"));
                     writer.println(progress);
-                    writer.close();
-                } catch (FileNotFoundException e) {
+                    writer.close(); */
+                try {
+                   // AssetManager am = MapsActivity.this.getApplicationContext().getAssets();
+                    outputStream = openFileOutput("b.txt", 0 );
+                    outputStream.write(progress);
+                    outputStream.close();
+                } catch (IOException e) {
                     e.printStackTrace();
                     System.err.println("Error: couldn't find output file!!!");
                 }

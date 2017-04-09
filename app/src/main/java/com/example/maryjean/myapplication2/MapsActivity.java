@@ -94,7 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             "x.txt",
             "y.txt",
             "z.txt"
-    }; */
+    }; //*/
 
     Button buttonA, buttonB, buttonC, buttonE, buttonF, buttonG,
             buttonH, buttonI, buttonJ, buttonK, buttonL, buttonM,
@@ -283,7 +283,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerzy = new KmlLayer(mMap, R.raw.lotzy, getApplicationContext());
             KmlLayer kmlLayerzr = new KmlLayer(mMap, R.raw.lotzr, getApplicationContext());
 
-*/
+//*/
 
            /* KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
             KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
@@ -343,7 +343,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 kmlLayercy.addLayerToMap();
             else if(YELLOW <= lotcstat && lotcstat <= RED)
                 kmlLayercr.addLayerToMap();
-/*
+
             if(MIN <= lotestat && lotestat < GREEN)
                 kmlLayereg.addLayerToMap();
             else if(GREEN <= lotestat && lotestat < YELLOW)
@@ -490,7 +490,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 kmlLayerzy.addLayerToMap();
             else if(YELLOW <= lotzstat && lotzstat <= RED)
                 kmlLayerzr.addLayerToMap();
-            */
+            //*/
 
 
 
@@ -594,7 +594,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lotastat = lotnameslist.remove(0);
         lotbstat = lotnameslist.remove(0);
         lotcstat = lotnameslist.remove(0);
-    }/*
         lotestat = lotnameslist.remove(0);
         lotfstat = lotnameslist.remove(0);
         lotgstat = lotnameslist.remove(0);
@@ -618,7 +617,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         lotzstat = lotnameslist.remove(0);
     }
 
-*/
+//*/
 
 
 
