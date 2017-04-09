@@ -5,22 +5,27 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.Polyline;
 import com.google.maps.android.kml.KmlLayer;
 
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap,gMap;
+    private GoogleMap mMap;
 
     Button buttonA,buttonB,buttonC,buttonE,buttonF,buttonG,
             buttonH,buttonI,buttonJ,buttonK,buttonL,buttonM,
@@ -31,11 +36,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        
+
     buttonA = (Button) findViewById(R.id.button1);
     buttonB = (Button) findViewById(R.id.button2);
     buttonC = (Button) findViewById(R.id.button3);
@@ -127,13 +131,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
 
         try {
-            KmlLayer kmlLayer = new KmlLayer(getMap(), R.raw.lots, getApplicationContext());
+            KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
+            KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
+            KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
             kmlLayer.addLayerToMap();
+            kmlLayera.addLayerToMap();
+            kmlLayerb.addLayerToMap();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         }
+
 
         mMap.addMarker(new MarkerOptions().position(Lot_A).title("Lot A"));
         mMap.addMarker(new MarkerOptions().position(Lot_B).title("Lot B"));
@@ -240,4 +249,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected GoogleMap getMap() {
         return mMap;
     }
+
 }
