@@ -2,7 +2,9 @@ package com.example.maryjean.myapplication2;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -27,14 +29,20 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private GoogleMap mMap;
 
-    Button buttonA,buttonB,buttonC,buttonE,buttonF,buttonG,
-            buttonH,buttonI,buttonJ,buttonK,buttonL,buttonM,
-            buttonO,buttonP,buttonQ,buttonR,buttonS,buttonT,
-            buttonU,buttonV,buttonW,buttonX,buttonY,buttonZ;
+    Button buttonA, buttonB, buttonC, buttonE, buttonF, buttonG,
+            buttonH, buttonI, buttonJ, buttonK, buttonL, buttonM,
+            buttonO, buttonP, buttonQ, buttonR, buttonS, buttonT,
+            buttonU, buttonV, buttonW, buttonX, buttonY, buttonZ;
+
+    Button buttonA2, buttonB2, buttonC2, buttonE2, buttonF2, buttonG2,
+            buttonH2, buttonI2, buttonJ2, buttonK2, buttonL2, buttonM2,
+            buttonO2, buttonP2, buttonQ2, buttonR2, buttonS2, buttonT2,
+            buttonU2, buttonV2, buttonW2, buttonX2, buttonY2, buttonZ2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,65 +52,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-/*    buttonA = (Button) findViewById(R.id.button1);
-    buttonB = (Button) findViewById(R.id.button2);
-    buttonC = (Button) findViewById(R.id.button3);
-    buttonE = (Button) findViewById(R.id.button4);
-    buttonF = (Button) findViewById(R.id.button5);
-    buttonG = (Button) findViewById(R.id.button6);
-    buttonH = (Button) findViewById(R.id.button7);
-    buttonI = (Button) findViewById(R.id.button8);
-    buttonJ = (Button) findViewById(R.id.button9);
-    buttonK = (Button) findViewById(R.id.button10);
-    buttonL = (Button) findViewById(R.id.button11);
-    buttonM = (Button) findViewById(R.id.button12);
-    buttonO = (Button) findViewById(R.id.button13);
-    buttonP = (Button) findViewById(R.id.button14);
-    buttonQ = (Button) findViewById(R.id.button15);
-    buttonR = (Button) findViewById(R.id.button16);
-    buttonS = (Button) findViewById(R.id.button17);
-    buttonT = (Button) findViewById(R.id.button18);
-    buttonU = (Button) findViewById(R.id.button19);
-    buttonV = (Button) findViewById(R.id.button20);
-    buttonW = (Button) findViewById(R.id.button21);
-    buttonX = (Button) findViewById(R.id.button22);
-    buttonY = (Button) findViewById(R.id.button23);
-    buttonZ = (Button) findViewById(R.id.button24);
 
+/*   buttonA2 = (Button) findViewById(R.id.button25);
+    buttonB2 = (Button) findViewById(R.id.button26);
+    buttonC2 = (Button) findViewById(R.id.button27);
+    buttonE2 = (Button) findViewById(R.id.button28);
+    buttonF2 = (Button) findViewById(R.id.button29);
+    buttonG2 = (Button) findViewById(R.id.button30);
+    buttonH2 = (Button) findViewById(R.id.button31);
+    buttonI2 = (Button) findViewById(R.id.button32);
+    buttonJ2 = (Button) findViewById(R.id.button33);
+    buttonK2 = (Button) findViewById(R.id.button34);
+    buttonL2 = (Button) findViewById(R.id.button35);
+    buttonM2 = (Button) findViewById(R.id.button36);
+    buttonO2 = (Button) findViewById(R.id.button37);
+    buttonP2 = (Button) findViewById(R.id.button38);
+    buttonQ2 = (Button) findViewById(R.id.button39);
+    buttonR2 = (Button) findViewById(R.id.button40);
+    buttonS2 = (Button) findViewById(R.id.button41);
+    buttonT2 = (Button) findViewById(R.id.button42);
+    buttonU2 = (Button) findViewById(R.id.button43);
+    buttonV2 = (Button) findViewById(R.id.button44);
+    buttonW2 = (Button) findViewById(R.id.button45);
+    buttonX2 = (Button) findViewById(R.id.button46);
+    buttonY2 = (Button) findViewById(R.id.button47);
+    buttonZ2 = (Button) findViewById(R.id.button48);*/
 
-    buttonA.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                lotA();
+    Button btn = (Button)findViewById(R.id.editbutton);
+
+    btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MapsActivity.this, MainActivity.class));
             }
-        }
-    );
-    buttonB.setOnClickListener(new View.OnClickListener()
-                                   {
-                                       public void onClick(View v)
-                                       {
-                                           lotB();
-                                       }
-                                   }
-        );
-    buttonC.setOnClickListener(new View.OnClickListener()
-                                   {
-                                       public void onClick(View v)
-                                       {
-                                           lotC();
-                                       }
-                                   }
-        );
-    buttonE.setOnClickListener(new View.OnClickListener()
-                                   {
-                                       public void onClick(View v)
-                                       {
-                                           lotE();
-                                       }
-                                   }
-        );*/
+        });
     }
+
     LatLng UWF = new LatLng(30.547969, -87.217352);
     LatLng Lot_A = new LatLng(30.544987, -87.219775);
     LatLng Lot_B = new LatLng(30.543522, -87.220311);
@@ -133,13 +118,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-       // mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
+        // mMap.addMarker(new MarkerOptions().position(UWF).title("Marker at UWF"));
 
         try {
             KmlLayer kmlLayer = new KmlLayer(mMap, R.raw.lots, getApplicationContext());
             KmlLayer kmlLayera = new KmlLayer(mMap, R.raw.lota, getApplicationContext());
             KmlLayer kmlLayerb = new KmlLayer(mMap, R.raw.lotb, getApplicationContext());
-/*
             KmlLayer kmlLayerc = new KmlLayer(mMap, R.raw.lotc, getApplicationContext());
             KmlLayer kmlLayere = new KmlLayer(mMap, R.raw.lote, getApplicationContext());
             KmlLayer kmlLayerf = new KmlLayer(mMap, R.raw.lotf, getApplicationContext());
@@ -162,11 +146,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             KmlLayer kmlLayerx = new KmlLayer(mMap, R.raw.lotx, getApplicationContext());
             KmlLayer kmlLayery = new KmlLayer(mMap, R.raw.loty, getApplicationContext());
             KmlLayer kmlLayerz = new KmlLayer(mMap, R.raw.lotz, getApplicationContext());
-*/
 
             kmlLayer.addLayerToMap();
             kmlLayera.addLayerToMap();
             kmlLayerb.addLayerToMap();
+            kmlLayerc.addLayerToMap();
+            kmlLayere.addLayerToMap();
+            kmlLayerf.addLayerToMap();
+            kmlLayerg.addLayerToMap();
+            kmlLayerh.addLayerToMap();
+            kmlLayeri.addLayerToMap();
+            kmlLayerj.addLayerToMap();
+            kmlLayerk.addLayerToMap();
+            kmlLayerl.addLayerToMap();
+            kmlLayerm.addLayerToMap();
+            kmlLayero.addLayerToMap();
+            kmlLayerp.addLayerToMap();
+            kmlLayerq.addLayerToMap();
+            kmlLayerr.addLayerToMap();
+            kmlLayers.addLayerToMap();
+            kmlLayert.addLayerToMap();
+            kmlLayeru.addLayerToMap();
+            kmlLayerv.addLayerToMap();
+            kmlLayerw.addLayerToMap();
+            kmlLayerx.addLayerToMap();
+            kmlLayery.addLayerToMap();
+            kmlLayerz.addLayerToMap();
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XmlPullParserException e) {
@@ -199,80 +205,107 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(Lot_Z).title("Lot Z"));*/
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(UWF));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF, 15));
     }
-    public void home() { mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF,15)); }
+
+    public void home() {
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(UWF, 15));
+    }
+
     public void lotA() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_A, 17));
     }
+
     public void lotB() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_B,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_B, 17));
     }
+
     public void lotC() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_C,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_C, 17));
     }
+
     public void lotE() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_E,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_E, 17));
     }
+
     public void lotF() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_F,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_F, 17));
     }
+
     public void lotG() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_G,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_G, 17));
     }
+
     public void lotH() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_H,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_H, 17));
     }
+
     public void lotI() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_I,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_I, 17));
     }
+
     public void lotJ() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_J,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_J, 17));
     }
+
     public void lotK() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_K,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_K, 17));
     }
+
     public void lotL() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_L,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_L, 17));
     }
+
     public void lotM() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_M,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_M, 17));
     }
+
     public void lotO() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_O,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_O, 17));
     }
+
     public void lotP() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_P,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_P, 17));
     }
+
     public void lotQ() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Q,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Q, 17));
     }
+
     public void lotR() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_R,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_R, 17));
     }
+
     public void lotS() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_S,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_S, 17));
     }
+
     public void lotT() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_T,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_T, 17));
     }
+
     public void lotU() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_U,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_U, 17));
     }
+
     public void lotV() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_V,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_V, 17));
     }
+
     public void lotW() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_W,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_W, 17));
     }
+
     public void lotX() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_X,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_X, 17));
     }
+
     public void lotY() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Y,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Y, 17));
     }
+
     public void lotZ() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Z,17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Lot_Z, 17));
     }
 
     protected GoogleMap getMap() {

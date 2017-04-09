@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>lots</name>
-    <Style id="poly-097138-1-77-nodesc-normal">
+    <name>Lot U</name>
+    <Style id="poly-FFEA00-1-77-nodesc-normal">
       <LineStyle>
-        <color>ff387109</color>
+        <color>ff00eaff</color>
         <width>1</width>
       </LineStyle>
       <PolyStyle>
-        <color>4d387109</color>
+        <color>4d00eaff</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
@@ -16,13 +16,13 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Style id="poly-097138-1-77-nodesc-highlight">
+    <Style id="poly-FFEA00-1-77-nodesc-highlight">
       <LineStyle>
-        <color>ff387109</color>
+        <color>ff00eaff</color>
         <width>2</width>
       </LineStyle>
       <PolyStyle>
-        <color>4d387109</color>
+        <color>4d00eaff</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
@@ -30,29 +30,35 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <StyleMap id="poly-097138-1-77-nodesc">
+    <StyleMap id="poly-FFEA00-1-77-nodesc">
       <Pair>
         <key>normal</key>
-        <styleUrl>#poly-097138-1-77-nodesc-normal</styleUrl>
+        <styleUrl>#poly-FFEA00-1-77-nodesc-normal</styleUrl>
       </Pair>
       <Pair>
         <key>highlight</key>
-        <styleUrl>#poly-097138-1-77-nodesc-highlight</styleUrl>
+        <styleUrl>#poly-FFEA00-1-77-nodesc-highlight</styleUrl>
       </Pair>
     </StyleMap>
     <Placemark>
-      <name>Lot S</name>
-      <styleUrl>#poly-097138-1-77-nodesc</styleUrl>
+      <name>Lot U</name>
+      <styleUrl>#poly-FFEA00-1-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <tessellate>1</tessellate>
             <coordinates>
-              -87.2150704,30.5520035,0
-              -87.2151965,30.5519111,0
-              -87.2147378,30.5515023,0
-              -87.2146037,30.5516293,0
-              -87.2150704,30.5520035,0
+              -87.2161031,30.5532485,0
+              -87.2162291,30.5535165,0
+              -87.2165698,30.5536065,0
+              -87.2168165,30.5535003,0
+              -87.2170123,30.5529205,0
+              -87.216956,30.5526849,0
+              -87.2167146,30.5525463,0
+              -87.2164384,30.5525925,0
+              -87.2161004,30.5528143,0
+              -87.2159609,30.5529667,0
+              -87.2161031,30.5532485,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>

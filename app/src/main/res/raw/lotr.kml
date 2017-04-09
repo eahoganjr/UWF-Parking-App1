@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>lots</name>
+    <name>lotr</name>
     <Style id="poly-097138-1-77-nodesc-normal">
       <LineStyle>
         <color>ff387109</color>
@@ -41,18 +41,21 @@
       </Pair>
     </StyleMap>
     <Placemark>
-      <name>Lot S</name>
+      <name>Lot R</name>
       <styleUrl>#poly-097138-1-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
             <tessellate>1</tessellate>
             <coordinates>
-              -87.2150704,30.5520035,0
-              -87.2151965,30.5519111,0
-              -87.2147378,30.5515023,0
-              -87.2146037,30.5516293,0
-              -87.2150704,30.5520035,0
+              -87.2153923,30.5510865,0
+              -87.2156176,30.5509826,0
+              -87.2153521,30.5504813,0
+              -87.2155157,30.5501002,0
+              -87.2150007,30.5500055,0
+              -87.2148424,30.5504744,0
+              -87.2150946,30.5505922,0
+              -87.2153923,30.5510865,0
             </coordinates>
           </LinearRing>
         </outerBoundaryIs>

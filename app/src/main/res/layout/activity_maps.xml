@@ -22,5 +22,13 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
+    <Button
+        android:id="@+id/editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="446dp" />
+
     <!-- set 150 maximum value for the progress -->
 </android.support.constraint.ConstraintLayout>
